@@ -1,0 +1,84 @@
+Command Line:
+cat file.txt | sort | uniq -c | less
+cat file.txt | grep "<insert text>"
+ps aux
+ps aux | awk -F '.' ' {print $1} '
+ps aux | awk '{ print $9 }' | awk -F ':' '{print $1}' | sort | uniq -c
+ps aux | awk '{print $1, $11}' | sort | grep 'root'
+cat filename.txt | wc -l
+ifconfig <interface>
+traceroute <address>
+pstree
+tig
+jp2a
+ctrl + l
+strings <file.txt> | grep "SKY"
+cat /path/to/access.log | awk '{print $1}' | sort | uniq -c | sort -n | tail
+dashed filename: ./
+space in file name: \
+find specific file size: find ./ -size 1033c
+
+John The Ripper:
+sudo john --show --format=<hashtype> hashes.txt 
+
+DNS Enummeration:
+host <hostname> or ip
+nslookup <hostname>
+nslookup
+    set type=ns #nameserver
+    set type=mx #emailserver
+dig <hostname>
+dig <hostname> -t [record type]
+dig <hostname> [record name]
+dig <hostname> -t [record type] +short
+
+Zone Transfers:
+host -t ns <domain>
+host -l <domain> [ns]
+dig <domain>
+dig axfr <domain> @[ns]
+nslookup
+set type=ns or set type=any
+dnsrecon -d zonetransfer.me -t axfr
+
+Metasploit:
+show payloads
+show targets
+show info
+search type[option] platform:[platform]
+
+
+NCL OSINT Questions:
+RPC Implementation: Courier
+smallest bitcoin unit: satoshi
+
+NCL:
+cat /path/to/access.log | awk '{print $1}' | sort | uniq -c | sort -n | tail 10
+cat yourlogs.txt | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort | uniq -c | sort
+sudo hashcat -a 0 -m 0 hashes.txt ncl.txt --show > cracked.txt
+strings <file.jpg> | grep "SKY"
+less example.log
+imago -i <unputDir> -o <outputDir> -x -g -t jpeg
+uncompyle6 -o ~/Desktop/ <file.pyc>
+crunch 12 12 <alphabet> -t USE-MASK-@,%^
+netdiscover -i [interface name]
+java -jar -Xmx512m diit-1.5.jar #Digital Invisible Ink Toolkit
+md5sum <filename>
+dirbuster website https://hidden-files.cityinthe.cloud/
+nmap website: ports.cityinthe.cloud 
+dirbuster - //extensionless search
+nmap -A -Pn -sU -sV <host>
+cewl <website> -d 1 >> output.txt
+strcpy >> strncpy
+exiftool <file> -gpslatitude -gpslongitude
+zip decryption: zip2john <file> *IMPORTANT: hash Starts/ends with $*
+ip addr show | grep eth1 | grep inet | awk '{print $2}'
+
+
+Burpsuite:
+Proxy: 127.0.0.1:8080
+
+
+
+
+

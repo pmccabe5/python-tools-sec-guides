@@ -1,0 +1,82 @@
+Powershell Workshop:
+	General
+		Blocking the hosting engine rather than Power Shell
+		Block capabilities and who can use it
+		Remote Management
+			ps remoting == ssh
+		OOP
+	Red Team Advantages
+		Installed by default Win7/2008R2
+		Don't know how to keep it up to date to c2
+		Rarely upgraded
+		ALL APIs available on Windows System
+		Traffic Encryption
+	Blue Team Advantages
+		Installed by default
+		Access to all the APIs available
+		Better control and logging
+		Use and abuse can be tracked across the entire enterprise with centralized logging
+		Encrypt traffic
+	Versions
+		If you upgrade, the older versions aren't deleted
+			Get Host = get PS version
+			powershell -version 2
+	Quick Hitters
+		Objects = Properties + Methods
+		Properties (attributes) of the Object
+		Methods = actions (open + closed)
+		{} = code block
+		DOS/Bash commands can be used as aliases
+		-Persist = save after session
+		Key/Subkey --> Properties 
+		Pipe sends all the output along the command
+			filter at the beginning
+		PSDrive = creates drives 
+		variables start with a $
+		converts right data type to type of left val
+		Case insensitive by default
+			-eq = maps to == (ieq)
+			-ceq = negate
+			-ne = not equal
+			-gt = greater than
+			-ge = greater than or equal to
+			-lt = less than
+			-le = less than or equal to
+			and
+			or
+			x..y = range inclusion of last val (array/list)
+			$x = nothing
+			$x++ = works like java
+			$x = 1
+			$x += <num> = same as python/java
+			get-process = ps
+			-First = head
+			stores output as an array
+			single quotes = literal strings
+			doube quotes = can be compared
+			match = REGEX
+			ForEach($something in $variable declared before)
+			`n = new line
+			@() = force array
+			; = continue on the same line
+			$true/$false
+			try must have a catch but not a finally
+			Write-Host can't be piped, Write-Output can be piped
+			Updates on your system
+			Get-wmiObject -Class 
+		Hashes
+			see demos
+		Data Storage
+			AD
+				over 50 properties
+					size limitations
+				requires applicable rights to alter
+				domain users can read it
+			.NET = brackets []
+			put() = save
+			LSAS = where credentials are stored
+		Event logs: .evtx format
+		out-gridview
+		WinRM enabled by default WinServer 2012+
+		@{} = hashtable
+		
