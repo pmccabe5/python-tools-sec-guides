@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+import hashlib
+hashval = input('[*] Enter a string to hash: ')
+md5 = hashlib.md5()
+md5.update(hashval.encode())
+print('MD5: ' + md5.hexdigest())
+sha1 = hashlib.sha1()
+sha1.update(hashval.encode())
+print('SHA1: ' + sha1.hexdigest())
+sha256 = hashlib.sha256()
+sha256.update(hashval.encode())
+sha224 = hashlib.sha224()
+sha224.update(hashval.encode())
+print('SHA224: ' + sha224.hexdigest())
+print('SHA256: ' + sha256.hexdigest())
+sha512 = hashlib.sha512()
+sha512.update(hashval.encode())
+print('SHA512: ' + sha512.hexdigest())
