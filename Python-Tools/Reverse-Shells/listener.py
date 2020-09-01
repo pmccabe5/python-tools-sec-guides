@@ -39,7 +39,7 @@ def shell():
         elif command[:2] == 'cd' and len(command) > 1:
 
             continue
-        
+
         else:
             result = receiveJSON().strip('\n')
             print(result)
